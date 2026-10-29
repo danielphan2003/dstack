@@ -1,6 +1,7 @@
 ---
 name: lakebed-share
 description: Use only to share an HTML page outside the current T3 thread, privately with end-to-end encryption. For a visual inside a T3 thread, use T3's html_render instead.
+license: MIT
 metadata:
   harness: [claude, codex, opencode]
   platform: [linux]

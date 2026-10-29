@@ -37,4 +37,4 @@ Some skills are copies of other people's work, kept with their licenses:
 | `babysit-pr`, `council`, `file-pr`, `full-send`, `full-stop`, `leaving-pr-comments`, `modernize`, `sol-loop`, `takeover` | Theo Browne's [tstack](https://github.com/t3dotgg/tstack) | MIT, in each folder |
 | `pstack-*` | Lauren Tan's pstack, via [t3-pstack](https://github.com/chhoumann/t3-pstack) | MIT, in each folder |
 
-The rest (`effect`, `lakebed-share`) are mine.
+The rest (`effect`, `lakebed-share`) are mine. Every skill is under the MIT license; each folder carries its own `LICENSE`.
