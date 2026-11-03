@@ -38,6 +38,11 @@ When using tstack skills (`council`, `sol-loop`, `full-send`, and the rest):
 - never add a Gemini model to the council, not even as a jester
 - this account's plan has no GPT Sol, so `sol-loop` reports that blocker; in `full-send`, run `council` where it says `sol-loop`
 
+When running shell commands:
+
+- these are Daniel's preferences: `rg` over `grep` and `fd` over `find`; where a newer replacement for a classic tool is installed (check with `command -v`), use it, and fall back to the classic tool when it is not
+- keep scripts committed to a repository on tools every machine has
+
 In general:
 
 - when asking questions, ask them one at a time
