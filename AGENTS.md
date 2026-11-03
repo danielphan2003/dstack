@@ -47,6 +47,12 @@ In general:
 
 - when asking questions, ask them one at a time
 
+When a task needs root:
+
+- where `sudo` is passwordless for your account, use it for the task at hand without asking
+- on an interactive desktop, use `sudo` only through its visible authorization prompt, and say what each command is for
+- never feed a password to `sudo` or `run0`, including one from a secret store, and never bypass the prompt
+
 When you need temporary files:
 
 - keep them in your harness's scratch space: Claude Code's session scratchpad, or your own subdirectory of `/tmp/opencode` in OpenCode; never loose in `/tmp`
