@@ -34,9 +34,9 @@ When delegating to subagents:
 
 When using tstack skills (`council`, `sol-loop`, `full-send`, and the rest):
 
-- the council, and the `pstack-interrogate` reviewers, are `claudeAgent/claude-opus-5-5 effort=xhigh`, `opencode/opencode-go/mimo-v2.6-pro`, and `opencode/opencode-go/glm-5.3-flash`; only frontier-class models sit on it, so never seat GPT-6 Luna or another budget model
+- the council, and the `pstack-interrogate` reviewers, are `claudeAgent/claude-opus-5-5 effort=xhigh`, `codex/gpt-6.1-sol reasoningEffort=xhigh`, and `opencode/opencode-go/mimo-v2.6-pro`; only frontier-class models sit on it, so never seat GPT-6 Luna, GLM-5.3-Flash or another budget model
 - never add a Gemini model to the council, not even as a jester
-- this account's plan has no GPT Sol, so `sol-loop` reports that blocker; in `full-send`, run `council` where it says `sol-loop`
+- `sol-loop` reviews with `codex/gpt-6.1-sol reasoningEffort=xhigh`, and `full-send` calls it as written; if `orchestrator_capabilities` lacks that target, `sol-loop` reports the blocker, and in `full-send`, run `council` where it says `sol-loop`
 
 When running shell commands:
 
