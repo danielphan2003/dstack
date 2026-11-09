@@ -42,6 +42,7 @@ When running shell commands:
 
 - these are Daniel's preferences: `rg` over `grep` and `fd` over `find`; where a newer replacement for a classic tool is installed (check with `command -v`), use it, and fall back to the classic tool when it is not
 - keep scripts committed to a repository on tools every machine has
+- avoid passing `-a`/`--binary` to `rg` unless the search term is in binary files; with it, rg reads disk images and other large binaries as text, and holds each run without a line break in memory, which can be gigabytes
 
 In general:
 
