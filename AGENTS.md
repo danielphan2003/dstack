@@ -27,7 +27,8 @@ When delegating to subagents:
 - targets below read `<providerInstanceId>/<model> <option>=<value>`; split at the first `/`, and pass the options as `target.options`
 - default child target: `opencode/skid/opencode-go/gpt-6-luna variant=xhigh`; the Codex quota is exhausted until 2026-11-18 03:51, after which use `codex/gpt-6-luna reasoningEffort=xhigh`
 - on OpenCode, use `skid/opencode-go/*` for OpenCode Go and `skid/refuseless/*` for Refuseless; never `opencode/*` (Zen), which fails with insufficient funds
-- never pick a Gemini model or Claude Fable (this plan cannot run Fable); run Claude children on T3's `claudeAgent` provider only, because other Claude routes bill paid extra usage
+- never pick a Gemini model; run Claude children on T3's `claudeAgent` provider only, because other Claude routes bill paid extra usage
+- Claude Fable is allowed when the user asks for it or the task needs its depth; otherwise prefer Opus, which costs less
 - use the harness's native subagent tool only when T3 is unavailable; state the reason when you fall back
 - never request `max` effort, and never enable fast mode or a priority service tier, unless the user instructs it; `xhigh` is the ceiling
 - check every target above against `orchestrator_capabilities` at call time; if one is missing, report it instead of guessing another
