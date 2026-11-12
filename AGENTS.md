@@ -48,6 +48,7 @@ When running shell commands:
 In general:
 
 - when asking questions, ask them one at a time
+- never write em dashes (`—`) in chat replies, commit messages, pull request text, docs, code comments or any other output; use a comma, colon, parentheses or a new sentence instead
 
 When a task needs root:
 
