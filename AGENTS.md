@@ -25,7 +25,7 @@ When delegating to subagents:
 
 - prefer the T3 Code orchestrator: call `orchestrator_capabilities` first and delegate with `delegate_task`
 - targets below read `<providerInstanceId>/<model> <option>=<value>`; split at the first `/`, and pass the options as `target.options`
-- default child target: `opencode/skid/opencode-go/gpt-6-luna variant=xhigh`; the Codex quota is exhausted until 2026-11-18 03:51, after which use `codex/gpt-6-luna reasoningEffort=xhigh`
+- default child target: `opencode/skid/opencode-go/deepseek-v4.1-flash variant=high`; this model offers `low`, `high` and `max` only, so `high` is the ceiling here
 - on OpenCode, use `skid/opencode-go/*` for OpenCode Go and `skid/refuseless/*` for Refuseless; never `opencode/*` (Zen), which fails with insufficient funds
 - never pick a Gemini model; run Claude children on T3's `claudeAgent` provider only, because other Claude routes bill paid extra usage
 - Claude Fable is allowed when the user asks for it or the task needs its depth; otherwise prefer Opus, which costs less
@@ -35,7 +35,7 @@ When delegating to subagents:
 
 When using tstack skills (`council`, `sol-loop`, `full-send`, and the rest):
 
-- the council, and the `pstack-interrogate` reviewers, are `claudeAgent/claude-opus-5-5 effort=xhigh`, `codex/gpt-6.1-sol reasoningEffort=xhigh`, and `opencode/skid/opencode-go/mimo-v2.6-pro`; only frontier-class models sit on it, so never seat GPT-6 Luna, GLM-5.3-Flash or another budget model
+- the council, and the `pstack-interrogate` reviewers, are `claudeAgent/claude-opus-5-5 effort=xhigh`, `codex/gpt-6.1-sol reasoningEffort=xhigh`, and `opencode/skid/opencode-go/mimo-v2.6-pro`; only frontier-class models sit on it, so never seat DeepSeek V4.1 Flash, GPT-6 Luna, GLM-5.3-Flash or another budget model
 - never add a Gemini model to the council, not even as a jester
 - `sol-loop` reviews with `codex/gpt-6.1-sol reasoningEffort=xhigh`, and `full-send` calls it as written; if `orchestrator_capabilities` lacks that target, `sol-loop` reports the blocker, and in `full-send`, run `council` where it says `sol-loop`
 
