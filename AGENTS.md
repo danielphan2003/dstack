@@ -27,7 +27,7 @@ When delegating to subagents:
 - targets below read `<providerInstanceId>/<model> <option>=<value>`; split at the first `/`, and pass the options as `target.options`
 - default child target: `opencode/skid/opencode-go/deepseek-v4.1-flash variant=high`; this model offers `low`, `high` and `max` only, so `high` is the ceiling here
 - on OpenCode, use `skid/opencode-go/*` for OpenCode Go and `skid/refuseless/*` for Refuseless; never `opencode/*` (Zen), which fails with insufficient funds
-- never pick a Gemini model; run Claude children on T3's `claudeAgent` provider only, because other Claude routes bill paid extra usage
+- the only Gemini model allowed is Gemini 4 Neon (`antigravity/gemini-4-neon`); never pick another Gemini model; run Claude children on T3's `claudeAgent` provider only, because other Claude routes bill paid extra usage
 - Claude Fable is allowed when the user asks for it or the task needs its depth; otherwise prefer Opus, which costs less
 - use the harness's native subagent tool only when T3 is unavailable; state the reason when you fall back
 - never request `max` effort, and never enable fast mode or a priority service tier, unless the user instructs it; `xhigh` is the ceiling
@@ -35,8 +35,7 @@ When delegating to subagents:
 
 When using tstack skills (`council`, `sol-loop`, `full-send`, and the rest):
 
-- the council, and the `pstack-interrogate` reviewers, are `claudeAgent/claude-opus-5-5 effort=xhigh`, `codex/gpt-6.1-sol reasoningEffort=xhigh`, and `opencode/skid/opencode-go/mimo-v2.6-pro`; only frontier-class models sit on it, so never seat DeepSeek V4.1 Flash, GPT-6 Luna, GLM-5.3-Flash or another budget model
-- never add a Gemini model to the council, not even as a jester
+- the council, and the `pstack-interrogate` reviewers, are `claudeAgent/claude-opus-5-5 effort=xhigh`, `codex/gpt-6.1-sol reasoningEffort=xhigh`, `opencode/skid/opencode-go/mimo-v2.6-pro`, and `antigravity/gemini-4-neon thought_level=xhigh`; only frontier-class models sit on it, so never seat DeepSeek V4.1 Flash, GPT-6 Luna, GLM-5.3-Flash or another budget model
 - `sol-loop` reviews with `codex/gpt-6.1-sol reasoningEffort=xhigh`, and `full-send` calls it as written; if `orchestrator_capabilities` lacks that target, `sol-loop` reports the blocker, and in `full-send`, run `council` where it says `sol-loop`
 
 When running shell commands:
