@@ -61,9 +61,26 @@ When you need temporary files:
 - delete what you created before handing back, unless the user needs it; then say where it is
 - files there untouched for 3 days are deleted automatically, so never keep anything there that must last
 
+To keep context small (every step re-reads the whole conversation, so output that enters it is paid for again on each later step):
+
+- batch independent commands and API calls into one script, and print only what the next step needs instead of raw output
+- search first, then read the lines that matter; read a large file by range, not whole
+- hand large reading (logs, long docs, many files, big command output) to a subagent or a cheaper child that returns its conclusion
+- prefer a text snapshot of a page or screen over a screenshot when the text is enough
+
 When committing:
 
 - commit unsigned, and never trigger a signing prompt; Daniel's signing key is a YubiKey that needs a touch for every signature
 - in a repository with a GitHub remote, work on a branch and land it through a pull request; Daniel's squash merge on GitHub produces a GitHub-signed commit on the default branch
 - write every commit message and pull request title as a Conventional Commit (`type(scope): summary`, e.g. `feat(services): …`, `fix(ci): …`, `docs: …`); the squash merge uses the PR title as the commit on the default branch
 - check the current branch before committing, and never commit or push to the default branch
+
+## Compact Instructions
+
+When you summarize a conversation for compaction:
+
+- carry forward everything from an earlier summary that still holds; never drop a detail because it came from a previous summary
+- keep exact identifiers verbatim: file paths, commands, hostnames, ports, URLs, PR and issue numbers, commit SHAs, versions and error messages
+- keep each decision with its reason, and every constraint, preference or refusal the user stated, in their words
+- keep the state of each change: uncommitted, committed, pushed, in review, merged, deployed, and what was verified
+- keep open questions, what is still unknown, and the next step; write "not recorded" rather than guessing
