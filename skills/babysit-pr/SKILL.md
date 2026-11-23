@@ -6,7 +6,7 @@ metadata:
   platform: [linux]
   scope: fleet
   origin: "https://github.com/t3dotgg/tstack (1085050), Theo Browne, MIT"
-  requires: "gh, signed in"
+  requires: "gh, signed in (GitHub); rad (Radicle)"
 ---
 
 # Babysit PR
@@ -19,6 +19,9 @@ right.
 Never write your own watcher, polling loop, or `sleep` loop. Use one watcher
 per PR: `watch_pull_request` in T3 Code, `pr-wait` everywhere else. Never run
 both on the same PR. Every watcher on a GitHub account shares one rate limit.
+A Radicle patch is read from the local node, so it has no rate limit, and
+`watch_pull_request` works the same. Radicle CI is not reported in T3 yet, so a
+patch has no checks to wait for.
 
 ### In T3 Code: `watch_pull_request`
 

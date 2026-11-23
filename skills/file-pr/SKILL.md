@@ -6,7 +6,7 @@ metadata:
   platform: [linux]
   scope: fleet
   origin: "https://github.com/t3dotgg/tstack (1085050), Theo Browne, MIT"
-  requires: "gh, signed in"
+  requires: "gh, signed in (GitHub); rad with an identity (Radicle)"
 ---
 
 # File PR
@@ -51,6 +51,23 @@ Open a real PR rather than a draft so review bots run. If `gh pr create` fails
 because the GraphQL rate limit is used up, open it through REST with
 `gh api repos/<owner>/<repo>/pulls -f title=... -f head=... -f base=... -F body=@<file>`. If the user also asked
 to babysit it, continue with the `babysit-pr` skill.
+
+In a fork, T3's `pull_request_create` can open the PR on the parent repository.
+When the user wants it on the fork, use `gh pr create --repo <owner>/<fork>`.
+
+### Radicle
+
+A repository whose remote is `rad` (`rad://<RID>`) takes patches, not PRs. In T3
+Code, `pull_request_create` opens one. Without it, push the branch to
+`refs/patches`, giving the title and description so no editor opens:
+
+```sh
+git push -o patch.message="<title>" -o patch.message="$(cat <body-file>)" rad refs/heads/<branch>:refs/patches
+```
+
+Update a patch by pushing its branch again with `-o patch.message="<what changed>"`.
+Always name the destination: with `push.default=upstream`, a bare `git push` from a
+branch that tracks `rad/main` pushes to `main`.
 
 Do not post a follow-up PR comment unless it serves the user's request. When a
 comment is needed, use the `leaving-pr-comments` skill.

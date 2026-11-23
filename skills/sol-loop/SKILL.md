@@ -38,7 +38,8 @@ Otherwise stop and ask.
 
 Find the base after `git fetch origin`:
 
-- PR: `gh pr view <n> --json baseRefName,headRefOid`. Check out the branch
+- PR: `gh pr view <n> --json baseRefName,headRefOid` (a Radicle patch:
+  `pull_request_read`, whose base is the default branch). Check out the branch
   only if clean. Confirm `HEAD` is the PR head, or ahead only by this
   change. Base: `git merge-base HEAD origin/<baseRefName>`.
 - Local: `git merge-base HEAD origin/<default-branch>`. No remote: a base
