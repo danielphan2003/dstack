@@ -5,7 +5,7 @@ description: |
 license: MIT
 compatibility: Needs Node 24, pnpm, network access to wattpad.com, and the user's Wattpad username and `token` cookie.
 metadata:
-  harness: [claude, codex, opencode]
+  harness: [claude, codex, opencode, antigravity]
   platform: [linux]
   scope: fleet
   origin: "local"

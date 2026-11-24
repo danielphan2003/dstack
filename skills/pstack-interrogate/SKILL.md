@@ -2,7 +2,7 @@
 name: pstack-interrogate
 description: 'Use when the user says "interrogate", or asks for an adversarial or multi-model review, to challenge or stress test a change, or to find blind spots.'
 metadata:
-  harness: [claude, codex, opencode]
+  harness: [claude, codex, opencode, antigravity]
   platform: [linux]
   scope: fleet
   origin: "https://github.com/chhoumann/t3-pstack (238d156), Lauren Tan's pstack, MIT"

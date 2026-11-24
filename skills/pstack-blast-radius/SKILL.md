@@ -2,7 +2,7 @@
 name: pstack-blast-radius
 description: 'Use when the user says "blast radius", asks what a change could break elsewhere, or wants a small diff they do not trust checked before it ships.'
 metadata:
-  harness: [claude, codex, opencode]
+  harness: [claude, codex, opencode, antigravity]
   platform: [linux]
   scope: fleet
   origin: "https://github.com/chhoumann/t3-pstack (238d156), Lauren Tan's pstack, MIT"

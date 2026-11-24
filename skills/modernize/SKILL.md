@@ -4,7 +4,7 @@ description: >-
   For getting old prs up to date. Use when asked to rebase a pr or
   "modernize".
 metadata:
-  harness: [claude, codex, opencode]
+  harness: [claude, codex, opencode, antigravity]
   platform: [linux]
   scope: fleet
   origin: "https://github.com/t3dotgg/tstack (1085050), Theo Browne, MIT"

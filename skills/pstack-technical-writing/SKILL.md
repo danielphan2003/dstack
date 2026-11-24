@@ -2,7 +2,7 @@
 name: pstack-technical-writing
 description: 'Use when writing or reviewing documentation (docs, RFCs, READMEs, runbooks), or when the user says "technical writing".'
 metadata:
-  harness: [claude, codex, opencode]
+  harness: [claude, codex, opencode, antigravity]
   platform: [linux]
   scope: fleet
   origin: "https://github.com/chhoumann/t3-pstack (238d156), Lauren Tan's pstack, MIT"

@@ -2,7 +2,7 @@
 name: sol-loop
 description: Use when the user says "sol loop".
 metadata:
-  harness: [claude, codex, opencode]
+  harness: [claude, codex, opencode, antigravity]
   platform: [linux]
   scope: fleet
   origin: "https://github.com/t3dotgg/tstack (1085050), Theo Browne, MIT"

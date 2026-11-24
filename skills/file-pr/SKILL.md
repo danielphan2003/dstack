@@ -2,7 +2,7 @@
 name: file-pr
 description: File a concise pull request. Use when the user asks to file, open, or create a PR.
 metadata:
-  harness: [claude, codex, opencode]
+  harness: [claude, codex, opencode, antigravity]
   platform: [linux]
   scope: fleet
   origin: "https://github.com/t3dotgg/tstack (1085050), Theo Browne, MIT"

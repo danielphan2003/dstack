@@ -5,7 +5,7 @@ description: |
 license: MIT
 compatibility: Requires Effect v4. Examples are reviewed against the version documented in this repository.
 metadata:
-  harness: [claude, codex, opencode]
+  harness: [claude, codex, opencode, antigravity]
   platform: [linux]
   scope: fleet
   origin: "local"

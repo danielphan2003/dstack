@@ -2,7 +2,7 @@
 name: takeover
 description: Take over existing work. Use when the user asks to take over a PR, branch, or agent thread, or requests a takeover.
 metadata:
-  harness: [claude, codex, opencode]
+  harness: [claude, codex, opencode, antigravity]
   platform: [linux]
   scope: fleet
   origin: "https://github.com/t3dotgg/tstack (1085050), Theo Browne, MIT"

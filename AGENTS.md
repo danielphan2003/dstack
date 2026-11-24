@@ -1,8 +1,11 @@
 # Global agent instructions
 
 Shared by every harness: Claude Code imports this file from `~/.claude/CLAUDE.md`,
-Codex reads it as `$CODEX_HOME/AGENTS.md`, and OpenCode lists it in
-`opencode.json` `instructions`. Shared skills live in `~/.agents/skills`.
+Codex reads it as `$CODEX_HOME/AGENTS.md`, OpenCode lists it in
+`opencode.json` `instructions`, and Antigravity reads it as
+`<gemini-dir>/config/AGENTS.md` (`~/.gemini/config/AGENTS.md`, plus each T3
+Code instance's `userdata/providers/antigravity/<hash>/config/AGENTS.md`).
+Shared skills live in `~/.agents/skills` (and each harness's skills directory).
 
 When working in typescript:
 

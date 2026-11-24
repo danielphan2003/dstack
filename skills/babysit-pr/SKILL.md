@@ -2,7 +2,7 @@
 name: babysit-pr
 description: Monitor a pull request through review and CI. Use when the user asks to monitor, watch, or babysit a PR.
 metadata:
-  harness: [claude, codex, opencode]
+  harness: [claude, codex, opencode, antigravity]
   platform: [linux]
   scope: fleet
   origin: "https://github.com/t3dotgg/tstack (1085050), Theo Browne, MIT"

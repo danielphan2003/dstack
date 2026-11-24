@@ -1,7 +1,7 @@
 # dstack
 
 The agent skills and global instructions I use every day with Claude Code,
-Codex and OpenCode, mostly through [T3 Code](https://t3.codes).
+Codex, OpenCode and Antigravity, mostly through [T3 Code](https://t3.codes).
 
 This repository is a mirror. The files live in my private infrastructure
 repository and are copied here after each change, so pull requests cannot be
@@ -24,8 +24,9 @@ came from.
 Copy or link a skill folder into your harness's skills directory:
 
 ```sh
-ln -s "$PWD/skills/council" ~/.claude/skills/council   # Claude Code
-ln -s "$PWD/skills/council" ~/.agents/skills/council   # Codex, OpenCode
+ln -s "$PWD/skills/council" ~/.claude/skills/council          # Claude Code
+ln -s "$PWD/skills/council" ~/.agents/skills/council          # Codex, OpenCode
+ln -s "$PWD/skills/council" ~/.gemini/config/skills/council   # Antigravity
 ```
 
 ## Credits

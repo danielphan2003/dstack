@@ -2,7 +2,7 @@
 name: pstack-unslop
 description: 'Use when the user says "unslop", asks to cut AI tells or make writing sound less machine-written, or before publishing prose another skill drafted.'
 metadata:
-  harness: [claude, codex, opencode]
+  harness: [claude, codex, opencode, antigravity]
   platform: [linux]
   scope: fleet
   origin: "https://github.com/chhoumann/t3-pstack (238d156), Lauren Tan's pstack, MIT"

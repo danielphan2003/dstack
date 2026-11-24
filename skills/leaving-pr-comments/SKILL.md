@@ -2,7 +2,7 @@
 name: leaving-pr-comments
 description: Use whenever leaving comments on GitHub.
 metadata:
-  harness: [claude, codex, opencode]
+  harness: [claude, codex, opencode, antigravity]
   platform: [linux]
   scope: fleet
   origin: "https://github.com/t3dotgg/tstack (1085050), Theo Browne, MIT"
